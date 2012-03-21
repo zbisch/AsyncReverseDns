@@ -11,8 +11,7 @@ Using cat: `cat ips.txt | python reverseDnsAsync.py`
 
 In the latter case, the file 'ips.txt' is a file with a single IP address on each line.
 
-After completing, the script will print out the IPs and hostnames for each IP address it
-found in the form of '<IP address>,<hostname>'.
+After completing, the script will print out the IPs and hostnames for each IP address it found in the form of '<IP address>,<hostname>'.
 
 Any IPs not printed could not be found (e.g. due to timeout, NXDomain, etc)
 

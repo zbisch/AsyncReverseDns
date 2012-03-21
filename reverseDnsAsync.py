@@ -66,7 +66,8 @@ class ReverseDNSer():
 if __name__ == "__main__":
     ips = set()
     for line in sys.stdin:
-        ips.add(line.strip())
+        if line.strip():
+            ips.add(line.strip())
     r = ReverseDNSer(ips)
     r.loadWork()
     r.run()

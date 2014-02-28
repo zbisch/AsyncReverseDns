@@ -1,8 +1,15 @@
 asyncRevDNS - Asynchronous Reverse DNS lookups
 
+WARNING
+=======
+This can quickly slam your DNS server pretty hard (default simultaneous requests is 1000).
+This works for me in environment I use, but could have issues.
+
 Zachary Bischof 2012
 
-To run, direct a list of IPs to stdin of script.  
+HOW TO USE
+==========
+To run, direct a list of IPs to stdin of script.
 
 E.g.
 Using echo: `echo "123.45.67.89\n98.76.54.32" | python reverseDnsAsync.py`
@@ -14,7 +21,6 @@ In the latter case, the file 'ips.txt' is a file with a single IP address on eac
 After completing, the script will print out the IPs and hostnames for each IP address it found in the form of '<IP address>,<hostname>'.
 
 Any IPs not printed could not be found (e.g. due to timeout, NXDomain, etc)
-
 
 Required libraries (not normally installed): twisted, IPy
 
